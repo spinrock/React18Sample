@@ -1,14 +1,11 @@
-import React, { Suspense } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import DemoSuspense from './components/DemoSuspense';
+import DemoTransition from './components/DemoTransition';
 
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<h1>Loading profile...</h1>}>
-        <DemoSuspense />
-      </Suspense>
+      <DemoTransition />
     </div>
   );
 }
