@@ -35,6 +35,11 @@
     - クリック/タイピング/スワイプ/プレスなど
 - Transition を用いた Update は UI 描画を変更させるようなもの
 
+- startTransition で括った部分の状態変化(に伴う UI 変更)は優先度を下げて実施される
+  - 他部分の処理(とそれにともなう UI 変化)のみ先に実施される
+  - useTransition を用いることで、Transition 内の状況(処理中/完了)を検知できる
+    - "Now Loading...”などの表記を簡単に実現できる
+
 ```
 import {startTransition} from 'react';
 
